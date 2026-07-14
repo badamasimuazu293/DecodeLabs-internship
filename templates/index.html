@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Tech Stack Recommender</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#4f46e5,#7c3aed);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    background:#fff;
+    width:100%;
+    max-width:500px;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.logo{
+    text-align:center;
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+h1{
+    text-align:center;
+    color:#1f2937;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#6b7280;
+    margin-bottom:30px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#374151;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border:2px solid #e5e7eb;
+    border-radius:12px;
+    font-size:16px;
+    transition:.3s;
+}
+
+input:focus{
+    outline:none;
+    border-color:#4f46e5;
+    box-shadow:0 0 10px rgba(79,70,229,.2);
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#4f46e5;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#4338ca;
+    transform:translateY(-2px);
+}
+
+.skills{
+    margin-top:20px;
+    font-size:14px;
+    color:#6b7280;
+    text-align:center;
+}
+
+.skills span{
+    display:inline-block;
+    background:#eef2ff;
+    color:#4f46e5;
+    padding:6px 12px;
+    border-radius:20px;
+    margin:5px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="logo">🤖</div>
+
+    <h1>AI Tech Stack Recommender</h1>
+
+    <p class="subtitle">
+        Discover the best technology career path based on your skills.
+    </p>
+
+    <form action="/recommend" method="POST">
+
+        <div class="form-group">
+            <label>Enter Your Skills</label>
+
+            <input
+                type="text"
+                name="skills"
+                placeholder="Python, SQL, Machine Learning"
+                required>
+        </div>
+
+        <button type="submit">
+            Generate Recommendations
+        </button>
+
+    </form>
+
+    <div class="skills">
+        Popular Skills:
+        <br><br>
+        <span>Python</span>
+        <span>SQL</span>
+        <span>AWS</span>
+        <span>Docker</span>
+        <span>Machine Learning</span>
+        <span>Django</span>
+    </div>
+
+</div>
+
+</body>
+</html>

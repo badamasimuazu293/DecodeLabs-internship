@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OCR Recognition System</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Machine's Optic Nerve</h1>
+
+    <p>Upload an image and extract text</p>
+
+    <form action="/predict"
+          method="POST"
+          enctype="multipart/form-data">
+
+        <input type="file"
+               name="image"
+               required>
+
+        <button type="submit">
+            Extract Text
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
